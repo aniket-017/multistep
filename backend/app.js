@@ -22,10 +22,10 @@ const user = require("./routes/userRoute")
 app.use("/aak/l1",venue);
 app.use("/aak/l1",user);
 
-app.use(express.static(path.join(__dirname, "../build")));
+app.use(express.static(path.join(__dirname, "../front/build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../build/index.html"));
+  res.sendFile(path.resolve(__dirname, "../front/build/index.html"));
 });
 
 
